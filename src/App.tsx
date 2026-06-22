@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1 className="font-bold text-6xl ">TaskForge</h1>
+      <h1 className="font-bold text-6xl ">TaskForge V2</h1>
     </>
   );
 }
