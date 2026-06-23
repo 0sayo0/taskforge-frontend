@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/* En v4, los estilos base se aplican directamente como CSS normal después del import */
+body {
+  @apply bg-[#09090b] text-gray-100 antialiased selection:bg-[#5C1D24]/30 selection:text-white;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom Scrollbars Premium para el Tablero Kanban */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #27272a;
+}
