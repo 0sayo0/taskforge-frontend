@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  /* 60% - Fondos principales y Canvas */
+  --color-canvas: #3c4245;
+
+  /* 30% - Superficies, contenedores y bordes */
+  --color-surface: #5f6769;
+
+  /* 10% - Acciones, focos e interactividad */
+  --color-brand: #719192;
+
+  /* Contraste - Tipografía premium y destacados */
+  --color-editorial: #dfcdc3;
+}
