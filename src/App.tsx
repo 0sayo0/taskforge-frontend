@@ -1,9 +1,12 @@
 import { Toaster } from "sonner";
+import { RouterProvider } from "react-router/dom";
+import { router } from "./routes/AppRoutes";
+
 function App() {
   return (
     <>
-      <h1 className="font-bold text-6xl ">TaskForge V2</h1>
       <Toaster theme="dark" position="top-right" closeButton />
+      <RouterProvider router={router} />
     </>
   );
 }
