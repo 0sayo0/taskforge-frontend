@@ -2,6 +2,9 @@ import { createBrowserRouter, Outlet } from "react-router";
 import AuthLayout from "../components/Layouts/AuthLayout";
 import { publicOnlyRoute, protectedRoute } from "./guards";
 import DashboardLayout from "../components/Layouts/DashboardLayout";
+import LoginPage from "../features/auth/pages/LoginPage";
+import RegirsterPage from "../features/auth/pages/RegirsterPage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -9,8 +12,11 @@ export const router = createBrowserRouter([
     loader: publicOnlyRoute,
     children: [
       {
-        path: "/auth",
         Component: AuthLayout,
+        children: [
+          { path: "/auth/login", Component: LoginPage },
+          { path: "/auth/register", Component: RegirsterPage },
+        ],
       },
     ],
   },
@@ -24,4 +30,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", Component: NotFoundPage },
 ]);

@@ -2,7 +2,7 @@
 
 import { redirect } from "react-router";
 
-const token = true;
+const token = false;
 
 export const publicOnlyRoute = () => {
   if (token) {
@@ -14,7 +14,7 @@ export const publicOnlyRoute = () => {
 
 export const protectedRoute = () => {
   if (!token) {
-    throw redirect("/auth");
+    throw redirect("/auth/login");
   }
 
   return null;
